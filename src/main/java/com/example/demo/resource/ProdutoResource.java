@@ -34,8 +34,8 @@ public class ProdutoResource {
 				.stream()
 				.sorted(Comparator.comparing(Produto::getPrice))
 				.sorted(Comparator.comparing(Produto::getStock).reversed())
-				.collect(Collectors.groupingBy(Produto::getBrand,
-						Collectors.groupingBy(Produto::getEan)));
+				.collect(Collectors.groupingBy(Produto::getEan,
+						Collectors.groupingBy(Produto::getBrand)));
 		
 		return new ResponseEntity<>(produtoEan, HttpStatus.OK);
 	}
