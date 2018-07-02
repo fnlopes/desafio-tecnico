@@ -2,7 +2,7 @@
 
 ## O que foi realizado.
 
-Foi criado uma API que irá receber uma lista de produtos, a partir desta lista, agrupa-los por EAN, depois por marca, também é realizado a ordenação de forma decrescente utilizando o estoque e depois a ordenação de forma crescente por preço.
+Foi criado uma API que irá receber uma lista de produtos, a partir desta lista, agrupa-los por EAN, depois por marca, também será realizada a ordenação de forma decrescente utilizando o estoque e depois a ordenação de forma crescente utilizando o campo preço.
 
 ## Como acessar
 
@@ -176,3 +176,6 @@ Para a API funcionar corretamente, ela deve receber uma lista de produtos, onde 
 #  Próximos passos
 - Implementação para permitir que o usuário defina filtros e ordenações personalizadas no momento da chamada do método.
 - Implementação de testes automatizados (TDD), para garantir o correto funcionamento da API.
+- Validação dos campos obrigatórios.
+- Paginação para o retorno dos produtos e não deixar o payload muito grande e pesado.
+- Implementação de uma forma de autenticação para garantir a segurança.
