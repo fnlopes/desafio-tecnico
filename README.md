@@ -7,6 +7,9 @@ Foi criado uma API que irá receber uma lista de produtos, a partir desta lista,
 ## Como acessar
 
 Para realizar o acesso, basta enviar um payload para o link: https://desafio-tecnico.herokuapp.com/produtos utilizando o método POST.
+- Utilizar a Autenticação Básica para realizar a chamada.
+- Usuário: admin
+- Password: admin
 
 
 ## Modelo do Payload
@@ -178,4 +181,4 @@ Para a API funcionar corretamente, ela deve receber uma lista de produtos, onde 
 - Implementação de testes automatizados (TDD), para garantir o correto funcionamento da API.
 - Validação dos campos obrigatórios.
 - Paginação para o retorno dos produtos e não deixar o payload muito grande e pesado.
-- Implementação de uma forma de autenticação para garantir a segurança.
+- Melhorar a forma de autenticação.
