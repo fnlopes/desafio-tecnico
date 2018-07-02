@@ -6,7 +6,7 @@ Foi criado uma API que irá receber uma lista de produtos, a partir desta lista,
 
 ## Como acessar
 
-Para realizar o acesso, basta enviar um payload para o link: https://desafio-tecnico.herokuapp.com/ utilizando o método POST.
+Para realizar o acesso, basta enviar um payload para o link: https://desafio-tecnico.herokuapp.com/produtos utilizando o método POST.
 
 
 ## Modelo do Payload
@@ -89,7 +89,7 @@ Para a API funcionar corretamente, ela deve receber uma lista de produtos, onde 
 
 ## Retorno esperado
 
-É esperado o retorno com os produtos agrupados por EAN e dentro deste agrupamento, um novo agrupamento por Marca caso ocorra marcas repetidas. Na listagem de produtos é listado de forma decrescente o estoque e após é listado de forma crescente por preço.
+É esperado o retorno HTTP Status 200 (OK), com os produtos agrupados por EAN e dentro deste agrupamento, um novo agrupamento por Marca caso ocorra marcas repetidas. Na listagem de produtos são listados de forma decrescente o estoque e após são listados de forma crescente por preço.
 
 ### Modelo esperado para retorno do Payload
 ```
@@ -171,4 +171,8 @@ Para a API funcionar corretamente, ela deve receber uma lista de produtos, onde 
         ]
     }
 }
-``` 
+```
+
+#  Próximos passos
+- Implementação para permitir que o usuário defina filtros e ordenações personalizadas no momento da chamada do método.
+- Implementação de testes automatizados (TDD), para garantir o correto funcionamento da API.
