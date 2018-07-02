@@ -89,4 +89,86 @@ Para a API funcionar corretamente, ela deve receber uma lista de produtos, onde 
 
 ## Retorno esperado
 
-É esperado o retorno com os produtos agrupados por EAN e dentro deste agrupamento, um novo agrupamento por Marca caso ocorra marcas repetidas. Na listagem de produtos é listado de forma decrescente o estoque e após é listado de forma crescente por preço. 
+É esperado o retorno com os produtos agrupados por EAN e dentro deste agrupamento, um novo agrupamento por Marca caso ocorra marcas repetidas. Na listagem de produtos é listado de forma decrescente o estoque e após é listado de forma crescente por preço.
+
+### Modelo esperado para retorno do Payload
+```
+{
+    "": {
+        "redav": [
+            {
+                "id": "80092",
+                "ean": "",
+                "title": "Espada de fótons Nikana Azul",
+                "brand": "redav",
+                "price": 1799.9,
+                "stock": 0
+            }
+        ]
+    },
+    "2059251400402": {
+        "nikana": [
+            {
+                "id": "bb2r3s0",
+                "ean": "2059251400402",
+                "title": "Corredor POD 3000hp Nikana",
+                "brand": "nikana",
+                "price": 17832.9,
+                "stock": 8
+            },
+            {
+                "id": "bb2r3s02",
+                "ean": "2059251400402",
+                "title": "Corredor POD 3000hp Nikana",
+                "brand": "nikana",
+                "price": 17830.9,
+                "stock": 7
+            }
+        ]
+    },
+    "7898054800492": {
+        "nikana": [
+            {
+                "id": "u7042",
+                "ean": "7898054800492",
+                "title": "Espada de fótons Nikana Azul",
+                "brand": "nikana",
+                "price": 2199.9,
+                "stock": 82
+            }
+        ]
+    },
+    "7898100848355": {
+        "trek": [
+            {
+                "id": "321",
+                "ean": "7898100848355",
+                "title": "Cruzador espacial Nikana - 3000m - sem garantia",
+                "brand": "trek",
+                "price": 790300.9,
+                "stock": 0
+            }
+        ],
+        "ekul": [
+            {
+                "id": "7728uu",
+                "ean": "7898100848355",
+                "title": "Cruzador espacial Ekul - 3000m - sem garantia",
+                "brand": "ekul",
+                "price": 1300000,
+                "stock": 1
+            }
+        ],
+        "nikana": [
+            {
+                "id": "123",
+                "ean": "7898100848355",
+                "title": "Cruzador espacial Nikana - 3000m - sem garantia",
+                "brand": "nikana",
+                "price": 820900.9,
+                "stock": 1
+            }
+        ]
+    }
+}
+``` 
