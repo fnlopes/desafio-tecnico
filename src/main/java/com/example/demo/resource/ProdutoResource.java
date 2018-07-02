@@ -21,7 +21,8 @@ import com.example.demo.model.Produto;
 public class ProdutoResource {
 		
 	@RequestMapping(method = RequestMethod.POST)
-	public ResponseEntity<?> salvar(@Valid @RequestBody List<Produto> produtos) {		
+	public ResponseEntity<?> salvar(@Valid @RequestBody List<Produto> produtos) {
+		// Metodo para realizar um filtro de produto, porém não foi utilizaod.
 		List<Produto> filtro = produtos
 				.stream()
 				.filter(p -> p.getTitle().contains("Ekul"))
