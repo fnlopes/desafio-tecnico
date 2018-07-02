@@ -85,3 +85,8 @@ Para a API funcionar corretamente, ela deve receber uma lista de produtos, onde 
 	}
 ]
 ```
+
+
+## Retorno esperado
+
+É esperado o retorno com os produtos agrupados por EAN e dentro deste agrupamento, um novo agrupamento por Marca caso ocorra marcas repetidas. Na listagem de produtos é listado de forma decrescente o estoque e após é listado de forma crescente por preço. 
