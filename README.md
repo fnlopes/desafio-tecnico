@@ -40,6 +40,11 @@ Para realizar uma ordenação
 http://desafio-tecnico.herokuapp.com/produtos?order_by=ean:asc
 ```
 
+Para realizar uma filtro com ordenação
+```
+http://desafio-tecnico.herokuapp.com/produtos?order_by=stock:desc&filter=id:bb2r3s0
+```
+
 ## Paginação
 
 Para que o payload não fique tão grande, pode ser adicionado paginação ao filtro ou ordenação.
