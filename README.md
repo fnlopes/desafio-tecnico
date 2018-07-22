@@ -177,8 +177,5 @@ Para a API funcionar corretamente, ela deve receber uma lista de produtos, onde 
 ```
 
 #  Próximos passos
-- Implementação para permitir que o usuário defina filtros e ordenações personalizadas no momento da chamada do método.
 - Implementação de testes automatizados (TDD), para garantir o correto funcionamento da API.
-- Validação dos campos obrigatórios.
-- Paginação para o retorno dos produtos e não deixar o payload muito grande e pesado.
 - Melhorar a forma de autenticação.

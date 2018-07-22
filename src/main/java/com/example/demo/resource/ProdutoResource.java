@@ -49,10 +49,10 @@ public class ProdutoResource  {
 	
 	// Função para receber o payload e fazer a ordenação e filtro baseado
 	// no que foi passado como parametros
-	@RequestMapping(method = RequestMethod.POST, params = {"filter", "order"})
+	@RequestMapping(method = RequestMethod.POST, params = {"filter", "order_by"})
 	public ResponseEntity<?> filtrarOrdenarProdutos(@RequestBody List<Produto> prod,
 			@RequestParam (value = "filter", defaultValue = "") String filter,
-			@RequestParam (value = "order", defaultValue = "") String order,
+			@RequestParam (value = "order_by", defaultValue = "") String order,
 			@RequestParam (value = "page", defaultValue = "0") int page,
 			@RequestParam (value = "size", defaultValue = "10") int size) {
 			
@@ -149,7 +149,7 @@ public class ProdutoResource  {
 	}
 	
 	
-	// Função para receber o payload e fazer a ordenação e filtro baseado
+	// Função para receber o payload e fazer o filtro baseado
 	// no que foi passado como parametros
 	@RequestMapping(method = RequestMethod.POST, params = "filter")
 	public ResponseEntity<?> filtrarProdutos(@RequestBody List<Produto> prod,
@@ -206,11 +206,11 @@ public class ProdutoResource  {
 	}
 		
 	
-	// Função para receber o payload e fazer a ordenação e filtro baseado
+	// Função para receber o payload e fazer a ordenação baseado
 	// no que foi passado como parametros
-	@RequestMapping(method = RequestMethod.POST, params = "order")
+	@RequestMapping(method = RequestMethod.POST, params = "order_by")
 	public ResponseEntity<?> OrdenarProdutos(@RequestBody List<Produto> prod,
-			@RequestParam (value = "order", defaultValue = "") String order,
+			@RequestParam (value = "order_by", defaultValue = "") String order,
 			@RequestParam (value = "page", defaultValue = "0") int page,
 			@RequestParam (value = "size", defaultValue = "10") int size) {
 			
