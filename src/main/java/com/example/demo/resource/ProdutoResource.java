@@ -230,6 +230,9 @@ public class ProdutoResource  {
 		
 		try {
 			ordenacao = order.split(":");
+			
+			if (!ordenacao[0].equals("order_by"))
+				
 					
 			// Bloco para verificar qual o campo realizar a ordenação e qual a orientação
 			if (ordenacao[0].toLowerCase().equals("id"))
@@ -273,7 +276,7 @@ public class ProdutoResource  {
 			
 		}
 		catch (Exception e) {
-			return new ResponseEntity<>("O filto ou ordenação não está correto.", HttpStatus.BAD_REQUEST);
+			return new ResponseEntity<>("A ordenação não está correto.", HttpStatus.BAD_REQUEST);
 		}
 		
 		produtos = paginacao(produtos, page, size);		

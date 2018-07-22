@@ -22,6 +22,36 @@ Para a API funcionar corretamente, ela deve receber uma lista de produtos, onde 
 - price
 - stock
 
+Obs.: Todos os campos são obrigatórios.
+
+## Realizando filtro ou ordenação
+
+Para realizar filtros ou ordenar, bastar informar no momento da chamada.
+
+### Exemplo da chamada
+
+Para realizar um filtro
+```
+http://desafio-tecnico.herokuapp.com/produtos?filter=ean:123
+```
+
+Para realizar uma ordenação
+```
+http://desafio-tecnico.herokuapp.com/produtos?order_by=ean:asc
+```
+
+## Paginação
+
+Para que o payload não fique tão grande, pode ser adicionado paginação ao filtro ou ordenação.
+Por padrão, o resultado virá sempre na primeira página e com um limite de 10 resultados, parametros estes que podem ser alterados pelo usuário.
+
+### Exemplo da Chamada.
+
+Exemplo para alterar as configurações de paginação e navegar por elas.
+```
+http://desafio-tecnico.herokuapp.com/produtos?order_by=ean:asc&page=0&size=3
+```
+
 ### Modelo do Payload de Entrada
 ```
 [
