@@ -1,38 +1,13 @@
 package com.example.demo.model;
 
-import java.util.ArrayList;
-import java.util.List;
-
-import javax.validation.constraints.NotNull;
-
-import static java.util.Arrays.asList;
-
 public class Produto {
 	
-	@NotNull
 	private String id;
-	
-	@NotNull
 	private String ean;
-	
-	@NotNull
 	private String title;
-	
-	@NotNull
 	private String brand;
-	
-	@NotNull
 	private float price;
-	
-	@NotNull
 	private int stock;
-	
-	public static List<Produto> produtoList;
-	
-	static {
-		produtoController();
-	}
-	
 	
 	public Produto(String id, String ean, String title, String brand, float price, int stock) {
 		this.id = id;
@@ -46,10 +21,6 @@ public class Produto {
 	public Produto() {
 	}
 	
-	private static void produtoController() {
-		produtoList = new ArrayList<>(asList(new Produto("1", "123", "teste", "teste", 1, 1), new Produto("2", "123", "teste 02", "teste", 1, 1)));
-	}
-
 	public String getId() {
 		return id;
 	}
